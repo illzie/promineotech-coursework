@@ -1,0 +1,230 @@
+/* --------- Global Styles --------- */
+:root {
+    /* Color Variables */
+    --clr-background: hsl(0, 10%, 96%);
+    --clr-text: hsl(0, 0%, 27%);
+    --clr-primary: hsl(0, 100%, 95%);
+    --clr-accent: hsl(0, 100%, 75%);
+    /* Filters */
+    --f-darker:brightness(55%);
+    /* Text Variables */
+    --fs-dislay: 3rem;
+}
+
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* Reset Rules to fully customize padding and margins */
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    /*  
+    Creates flex box out of body tag to    
+    force footer to the bottom of the page 
+    when content doesn't fill entire page
+    */
+    background-color: var(---clr-background);
+    /* Uses color variable to set default background-color */
+    font-family: system-ui;
+    /* Uses the system font to display as default */
+    color: var(---clr-text);
+    /* Uses color variable to set default text color */
+}
+
+main {
+    flex: auto 1;
+    /* Element that pushes footer to bottom */
+    padding-inline: 1rem;
+    /* Adds pading to right and left of the page*/
+}
+
+header {
+    margin-block-end: 1rem;
+    /* Adds margin to bottom of header section */
+    background-color: var(--clr-primary);
+
+}
+
+.hero {
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem;
+    /* Creates layout for hero section so title and navigation links float next to one another */
+}
+
+.hero nav,
+.hero .title {
+    padding-block: 1rem;
+    color: var(--clr-accent);
+    /* Adds styling to Title and Navigation sections */
+}
+
+.title {
+    filter: var(--f-darker);
+    /* Darkens Title color*/
+}
+
+.title h1 {
+    font-size: var(--fs-dislay);
+    /* Variable to control font soze */
+    margin-bottom: 0.2lh;
+}
+
+.hero nav {
+    display: flex;
+}
+
+.hero nav a {
+    position: relative;
+    display: block;
+    /*  
+    Changes <a> tags to block element so that 
+    padding can also be used to trigger link  
+    */
+    padding: 2px 10px;
+    margin-inline: 3px;
+    color: var(--clr-accent);
+    text-decoration: none;
+    text-transform: uppercase;
+    /* Changes Text to be uppercase */
+    font-weight: 600;
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* Positions for hover effect */
+    width: 0;
+    /* Width starts at zero so it will appear to grow when link is hovered over */
+    height: 2px;
+    background-color: var(--clr-accent);
+    transition: width 200ms;
+    /* Set up for effect for navigation links to make underline appear when hovered over */
+}
+
+nav a:hover::before {
+    width: 100%; 
+    /* final size for hover line */
+}
+
+nav a.active {
+    filter: var(--f-darker);
+}
+
+nav a.active::before {
+    width: 100%; 
+    /* Changes line to show by default when on active page */
+}
+
+nav a.active:hover::before {
+    width: 0;
+    /* Hides line on hover when on active page */
+}
+
+footer {
+    background-color: var(--clr-primary);
+}
+
+footer p {
+    padding: 1rem;
+    text-align: center;
+}
+
+/* --------- Home Page Styles --------- */
+table {
+    border: 1px solid var(--clr-accent);
+    border-collapse: collapse; 
+    /* Colapses border padding so fill reaches full width and height of table*/
+    width: clamp(300px, 100%, 800px);
+    /* Keeps table size between 800px and 300px in size */
+    margin: 0 auto;
+}
+
+table tr * {
+    padding: 10px;
+    /* Adds padding to everything inside of the table cells */
+}
+
+th {
+    background-color: var(--clr-accent);
+    color: white;
+    text-transform: uppercase;
+    /* Table Header styles */
+}
+
+tr:not(:has(th)):nth-child(odd) {
+    background-color: antiquewhite;
+    /* Changes every other odd numbered line that isn't a header row */
+}
+td:not(:first-child){
+    border-left:1px solid var(--clr-accent);
+    /* 
+    Adds border line to left-hand size to cells 
+    that are not the first in their respective row
+     */
+}
+
+/* --------- About Page Styles --------- */
+h3 {
+    margin-block: .5rem 1rem;
+    /* Adds margin to give h3 elements more room to breath */
+}
+
+ul,
+ol {
+    padding-inline-start: 2rem;
+    /* Adding back custom padding to account for the reset */
+    margin-bottom: 3rem;
+    /* Adds margin to bottom of element to add more seperation */
+}
+
+li {
+    margin-bottom: 0.5rem;
+    /* Also adds margin to bottom of element to add more seperation */
+}
+
+/* --------- Contact Page Styles --------- */
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    background-color: var(--clr-primary);
+    width: clamp(300px, 100%, 800px);
+    /* Keeps form containter within 800px and 300px */
+}
+
+form>p {
+    margin-top: 1rem;
+    /* Adds padding to each form element except for the first one */
+}
+
+form p {
+    display: flex;
+    flex-direction: column;
+    /* Adds styling so input elements stretch out to full length of form */
+}
+
+form input,
+form textarea {
+    margin-top: 0.5em;
+    padding: 0.5em;
+    border: 1px solid var(--clr-accent);
+    /* Adds styes to form inputs so text has more room to breathe */
+}
+
+form label,
+form input[type=submit] {
+    text-transform: uppercase;
+}
