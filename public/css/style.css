@@ -1,0 +1,95 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: ghostwhite;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.content-grid {
+  --padding-inline: 2rem;
+  --content-max-width: 70ch;
+  --breakout-max-width: 85ch;
+  --breakout-size: calc((var(--breakout-max-width) - var(--content-max-width))/2);
+  display: grid;
+  grid-template-columns: [full-width-start] minmax(var(--padding-inline), 1fr) [breakout-start] minmax(0, var(--breakout-size)) [content-start] min(100% - var(--padding-inline) * 2, var(--content-max-width)) [content-end] minmax(0, var(--breakout-size)) [breakout-end] minmax(var(--padding-inline), 1fr) [full-width-end];
+}
+.content-grid > :not(.breakout, .full-width),
+.content-grid .full-width > :not(.breakout, .full-width) {
+  grid-column: content;
+}
+.content-grid > .breakout {
+  grid-column: breakout;
+}
+.content-grid > .full-width {
+  grid-column: full-width;
+}
+
+.class-weeks {
+  list-style-type: none;
+}
+
+.week-link a {
+  display: block;
+  padding: 1rem 1.5rem;
+}
+.week-link:nth-child(1) a::after {
+  content: " 2";
+}
+.week-link:nth-child(2) a::after {
+  content: " 3";
+}
+.week-link:nth-child(3) a::after {
+  content: " 4";
+}
+.week-link:nth-child(4) a::after {
+  content: " 5";
+}
+.week-link:nth-child(5) a::after {
+  content: " 6";
+}
+.week-link:nth-child(6) a::after {
+  content: " 7";
+}
+.week-link:nth-child(7) a::after {
+  content: " 8";
+}
+.week-link:nth-child(8) a::after {
+  content: " 9";
+}
+.week-link:nth-child(9) a::after {
+  content: " 10";
+}
+.week-link:nth-child(10) a::after {
+  content: " 11";
+}
+.week-link:nth-child(11) a::after {
+  content: " 12";
+}
+.week-link:nth-child(12) a::after {
+  content: " 13";
+}
+.week-link:nth-child(13) a::after {
+  content: " 14";
+}
+.week-link:nth-child(14) a::after {
+  content: " 15";
+}
+.week-link:nth-child(15) a::after {
+  content: " 16";
+}
+.week-link:nth-child(16) a::after {
+  content: " 17";
+}
+.week-link:nth-child(17) a::after {
+  content: " 18";
+}
+.week-link:nth-child(18) a::after {
+  content: " 19";
+}
