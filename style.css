@@ -1,3 +1,10 @@
+:root {
+    --clr-background: #f8f8ff;
+    --clr-accent: #25bad0;
+    --clr-text: #454545;
+    --clr-disabled: #b6b6b6;
+}
+
 *,
 *::after,
 *::before {
@@ -7,7 +14,8 @@
 }
 
 body {
-    background-color: ghostwhite;
+    background-color: var(--clr-background);
+    color: var(--clr-text);
     min-height: 100vh;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
@@ -38,83 +46,50 @@ body {
     grid-column: full-width;
 }
 
+header {
+    padding-block: 2em;
+}
+
+header img {
+    filter: drop-shadow(0px 1000px 0 var(--clr-accent));
+    transform: translateY(-1000px);
+}
+
+main>* {
+    margin-top: 2rem;
+}
+
+.accent {
+    color: var(--clr-accent);
+}
+
+h1 {
+    text-align: center;
+    margin-block: 0.5rem;
+}
+
+.student {
+    display: flex;
+    justify-content: space-between;
+}
+
 .class-weeks {
     list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.week-link {
+    background-color: white;
+    padding: 0.5rem;
+    border: 1px solid var(--clr-disabled);
 }
 
 .week-link a {
-    display: block;
-    padding: 1rem 1.5rem;
+    color: var(--clr-accent);
 }
 
-.week-link:nth-child(1) a::after {
-    content: " 2";
-}
-
-.week-link:nth-child(2) a::after {
-    content: " 3";
-}
-
-.week-link:nth-child(3) a::after {
-    content: " 4";
-}
-
-.week-link:nth-child(4) a::after {
-    content: " 5";
-}
-
-.week-link:nth-child(5) a::after {
-    content: " 6";
-}
-
-.week-link:nth-child(6) a::after {
-    content: " 7";
-}
-
-.week-link:nth-child(7) a::after {
-    content: " 8";
-}
-
-.week-link:nth-child(8) a::after {
-    content: " 9";
-}
-
-.week-link:nth-child(9) a::after {
-    content: " 10";
-}
-
-.week-link:nth-child(10) a::after {
-    content: " 11";
-}
-
-.week-link:nth-child(11) a::after {
-    content: " 12";
-}
-
-.week-link:nth-child(12) a::after {
-    content: " 13";
-}
-
-.week-link:nth-child(13) a::after {
-    content: " 14";
-}
-
-.week-link:nth-child(14) a::after {
-    content: " 15";
-}
-
-.week-link:nth-child(15) a::after {
-    content: " 16";
-}
-
-.week-link:nth-child(16) a::after {
-    content: " 17";
-}
-
-.week-link:nth-child(17) a::after {
-    content: " 18";
-}
-
-.week-link:nth-child(18) a::after {
-    content: " 19";
+.week-link a:not([href]) {
+    color: var(--clr-disabled);
 }
