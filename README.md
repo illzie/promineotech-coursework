@@ -1,3 +1,3 @@
-# promineotech-coursework
-Promineo Tech Coursework Repository
-# week2assignment
+# Promineotech Tech Coursework Repository
+Iliana Franco - Jan 2024
+# Week 2 assignment
