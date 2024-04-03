@@ -6,3 +6,21 @@
 
 ### Week 3 Assignment
 <a href="https://github.com/illzie/week-03">Week 3 Repository</a>
+
+### Week 7 Assignment
+<a href="https://github.com/illzie/week-07">Week 7 Repository</a>
+
+### Week 8 Assignment
+<a href="https://github.com/illzie/week-08">Week 8 Repository</a>
+
+### Week 9 Assignment
+<a href="https://github.com/illzie/week-09">Week 9 Repository</a>
+
+### Week 10 Assignment
+<a href="https://github.com/illzie/week-10">Week 10 Repository</a>
+
+### Week 11 Assignment
+<a href="https://github.com/illzie/week-11">Week 11 Repository</a>
+
+### Week 12 Assignment
+<a href="https://github.com/illzie/week-12">Week 12 Repository</a>
