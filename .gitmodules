@@ -1,3 +1,15 @@
 [submodule "week-03"]
 	path = week-03
 	url = https://github.com/illzie/week-03
+[submodule "week-11"]
+	path = week-11
+	url = https://github.com/illzie/week-11
+[submodule "week-12"]
+	path = week-12
+	url = https://github.com/illzie/week-12
+[submodule "week-10"]
+	path = week-10
+	url = https://github.com/illzie/week-10
+[submodule "week-07"]
+	path = week-07
+	url = https://github.com/illzie/week-07
